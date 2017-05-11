@@ -23,7 +23,7 @@ header::after {
 
 .logo {
   float: left;
-  
+
 }
 
 nav {
@@ -39,3 +39,14 @@ nav ul {
 nav li {
   display: inline-block;
   margin-left: 70px;
+}
+h2 {
+  float: right;
+ 
+
+}
+
+p {
+  margin-top: 50px;
+  font-size: 20pt;
+}
