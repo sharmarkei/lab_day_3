@@ -105,4 +105,4 @@ while (game != 'AWESOME') {
  alert('Try again!');
  var game = prompt("How would you rate this game? (Bad? Okay? Awesome?)").toUpperCase();
 }
-alert('Correct!') 
+alert('Correct!')
