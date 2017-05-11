@@ -65,7 +65,7 @@ var comp;
 for (var i = 0; i < comupterChoice.length; i++) {
   console.log('computerChoice:', comupterChoice[i]);
 }
-console.log('type computer:' + computer);
+
 
 if(computer === comupterChoice) {
   alert('Apple squad!');
