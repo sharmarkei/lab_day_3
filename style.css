@@ -13,6 +13,8 @@ body {
 header {
   background: #016ebd;
   padding: 20px;
+  margin: 10px;
+  margin-right: 10px;
 }
 
 header::after {
@@ -49,7 +51,7 @@ h2 {
 p {
   margin-top: 50px;
   margin-left: 10px;
-  font-size: 20pt;
+  font-size: 12pt;
 }
 .box{
   position: relative;
@@ -67,5 +69,10 @@ p {
   background: rgba(0, 0, 0, .5);
   text-align: center;
   padding: 10px 0;
+
+}
+img {
+  float: left;
+  margin: 4px;
 
 }
