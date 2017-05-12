@@ -32,11 +32,31 @@ function fiveQuestions(){
     alert('How are you alive if you don\'t?!');
   }
 
-  var number = parseInt(prompt('What is my favorite number?'))
-  var guess;
+  var num = Math.floor((Math.random()*20)+1);
+  var counter = 1
+  var guesses;
+  console.log('num gen:', num);
 
-  while(number!=29){
-    alert('Not ')
+  while(guesses !==  num) {
+    guesses = parseInt(prompt('What is the number I\'m thing about? 1-20'));
+    if(guesses < num) {
+      alert('Too Low!');
+      counter++;
+    } else if (guesses > num) {
+      alert('Too High!');
+      counter++;
+    } else if (guesses === NaN || num === null) {
+      alert('Enter your answer');
+      counter++
+    }
+    if (counter > 4) {
+      alert('WRONG! The number was', num);
+      break;
+    }
+  }
+  if (guesses === num) {
+    alert('We have a winner!');
+    console.log('attempts:', counter);
   }
 
     // Third Question
