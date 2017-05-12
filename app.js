@@ -32,6 +32,13 @@ function fiveQuestions(){
     alert('How are you alive if you don\'t?!');
   }
 
+  var number = parseInt(prompt('What is my favorite number?'))
+  var guess;
+
+  while(number!=29){
+    alert('Not ')
+  }
+
     // Third Question
 
   var height = prompt('Am I taller than 6 feet?').toUpperCase();
@@ -100,14 +107,22 @@ function multiChoice(){
   var houseArray = ['SEATTLE', 'TACOMA', 'BELLEVUE'];
   var house = prompt('What are my favorite cities in Washington?').toUpperCase();
   var first;
+  /*loops that have conditions with array.length dependancies are prone to errors.
+  This is because the length of the array can change, so in order to prevent that.
+  Try this format
+  for (var i = 0, l = houseArray.length; i < l; i++)
+  l is defined as the length before it has a chance to change. If the length of the array
+  changes, l will not change it's value with that, thus protecting the integrity and
+  intended number of iterations :D
+  */
 
-  for (var i = 0; i < houseArray.length; i++) {
+  for (var i = 0; i < 6; i++) {
     console.log('houseArray:', houseArray[i]);
 
-    if (house === houseArray[i] ) {
-    alert('One of my favorite cities!');
-    first = true;
-    break;
+    if (houseArray.includes(house) ) {
+      alert('One of my favorite cities!');
+      first = true;
+      break;
     }
   }
   if(!first) {
