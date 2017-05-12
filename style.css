@@ -2,7 +2,7 @@
   font-family: helvetica;
 }
 body {
-  background: #222;
+  background: #555c8f;
 }
 
 .container {
@@ -48,13 +48,14 @@ h2 {
 
 p {
   margin-top: 50px;
+  margin-left: 10px;
   font-size: 20pt;
 }
 .box{
   position: relative;
   width: 200px;
   height:200px;
-/*   outline: dotted 5px orange; */
+  /*outline: dotted 5px orange; */
 
 }
 
