@@ -1,15 +1,15 @@
 'use strict'
 
-  // Start
+// Start
 
 alert('Hello! Let\'s play a little game!');
 
 // Get Player's Name
 
-  var user = prompt('First things first, What\'s you\'re name?');
-  console.log('user name: ', user);
-  alert('Thanks ' + user + ' ! Let\'s get started!');
-  var scoreCounter = 0;
+var user = prompt('First things first, What\'s you\'re name?');
+console.log('user name: ', user);
+alert('Thanks ' + user + '! Let\'s get started!');
+var scoreCounter = 0;
 
 // Five yes/no questions
 
@@ -28,42 +28,42 @@ function getToKnowMe() {
     }
   }
 }
-getToKnowMe()
+getToKnowMe();
 
   // First Multi Choice Game
 
-  function favoriteShoes() {
-    var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
-    console.log('questionOne shoes:' + shoe);
+function favoriteShoes() {
+  var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
+  console.log('questionOne shoes:' + shoe);
 
-    while (shoe != 'NIKE') {
-      alert('Wrong! Try again');
-      var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
-    }
-    alert('Correct!');
-    scoreCounter++;
+  while (shoe != 'NIKE') {
+    alert('Wrong! Try again');
+    shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
   }
-  favoriteShoes();
+  alert('Correct!');
+  scoreCounter++;
+}
+favoriteShoes();
 
 // number game
 
 function numberGame(){
   var num = Math.floor((Math.random()*20)+1);
-  var counter = 1
+  var counter = 1;
   var guesses;
   console.log('num gen:', num);
 
-  while(guesses !==  num) {
+  while (guesses !==  num) {
     guesses = parseInt(prompt('What is the number I\'m thing about? 1-20'));
-    if(guesses < num) {
+    if (guesses < num) {
       alert('Too Low!');
       counter++;
     } else if (guesses > num) {
       alert('Too High!');
       counter++;
-    } else if (guesses === NaN || num === null) {
+    } else if (isNaN(guesses) || num === null) {
       alert('Enter your answer');
-      counter++
+      counter++;
     }
     if (counter > 4) {
       alert('WRONG! The number was', num);
@@ -103,8 +103,8 @@ function multiChoice(){
       break;
     }
   }
-  if(!first) {
-  alert('Nahh, that city sucks.');
+  if (!first) {
+    alert('Nahh, that city sucks.');
   }
 }
 multiChoice();
@@ -113,17 +113,17 @@ multiChoice();
 
 function rating() {
   while (game != 'AWESOME') {
-    var game = prompt("How would you rate this game? (Bad? Okay? Awesome?)").toUpperCase();
-    if(game === 'AWESOME'){
+    var game = prompt('How would you rate this game? (Bad? Okay? Awesome?)').toUpperCase();
+    if (game === 'AWESOME') {
       alert('Correct!');
-      scoreCounter++
+      scoreCounter++;
       break;
-    }else{
-       alert('Try again!');
+    } else {
+      alert('Try again!');
     }
     console.log('answer game:' + game);
   }
 }
 rating();
 
-prompt('Thank you for playing my game ' + user + '!' + ' Your score is ' + scoreCounter + ' out of 8. Not too bad ')
+prompt('Thank you for playing my game ' + user + '!' + ' Your score is ' + scoreCounter + ' out of 8. Not too bad ');
