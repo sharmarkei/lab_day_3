@@ -5,33 +5,49 @@
 alert('Hello! Let\'s play a little game!');
 
 // Get Player's Name
-function fiveQuestions(){
+
   var user = prompt('First things first, What\'s you\'re name?');
-  console.log('user name:' + user);
+  console.log('user name: ', user);
   alert('Thanks ' + user + ' ! Let\'s get started!');
+  var scoreCounter = 0;
 
-  //first question add counter to something
-  var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
+// Five yes/no questions
 
-  console.log('questionOne shoes:' + shoe);
+function getToKnowMe() {
+  var questions = ['Do I drink water?','Am I taller than 6 feet?','Do I workout?', 'Was I born in another country?', 'Does Apple make my favorite computer?'];
+  var answers = ['YES', 'NO','NO', 'YES', 'YES'];
+  var otherAnswers = ['Y', 'N', 'N', 'Y', 'Y'];
 
-  while (shoe != 'NIKE') {
-    alert('Wrong! Try again');
+  for (var i = 0; i < questions.length; i++) {
+    var askQuestions = prompt(questions[i]).toUpperCase();
+    if(askQuestions === answers[i] || askQuestions === otherAnswers[i]) {
+      alert('Correct, good job!');
+      scoreCounter++;
+    } else {
+      alert('Sorry, that\'s incorrect!');
+    }
+  }
+}
+getToKnowMe()
+
+  // First Multi Choice Game
+
+  function favoriteShoes() {
     var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
+    console.log('questionOne shoes:' + shoe);
+
+    while (shoe != 'NIKE') {
+      alert('Wrong! Try again');
+      var shoe = prompt('What is my favorite shoe brand?(Vans/Nike/Asics?)').toUpperCase();
+    }
+    alert('Correct!');
+    scoreCounter++;
   }
-  alert('Correct!');
+  favoriteShoes();
 
-  // Second Question
+// number game
 
-  var drink = prompt('Do I drink water?').toUpperCase();
-  console.log('choice drink:' + drink);
-
-  if (drink === 'Y' || drink === 'YES') {
-    alert('Only when I\'m not sleeping');
-  } else {
-    alert('How are you alive if you don\'t?!');
-  }
-
+function numberGame(){
   var num = Math.floor((Math.random()*20)+1);
   var counter = 1
   var guesses;
@@ -56,73 +72,14 @@ function fiveQuestions(){
   }
   if (guesses === num) {
     alert('We have a winner!');
+    scoreCounter++;
     console.log('attempts:', counter);
   }
-
-    // Third Question
-
-  var height = prompt('Am I taller than 6 feet?').toUpperCase();
-  console.log('my height:' + height);
-
-  if (height === 'Y' || height === 'YES') {
-    alert('Only if I keep drinking my milk!');
-  } else if (height === 'N' || height === 'NO') {
-    alert('Yeaaa, I\'m just an average joe');
-  } else {
-    alert('Dude, only answer Y/N');
-  }
-
-    // Fourth Question
-function goodName(){
-  var comupterChoice = ['MAC', 'MACBOOK', 'MAC BOOK', 'MACBOOK PRO', 'APPLE', 'MAC BOOK PRO'];
-  var computer = prompt('What kinda computer do I prefer?').toUpperCase();
-  var flag;
-
-  for (var i = 0; i < comupterChoice.length; i++) {
-    console.log('computerChoice:', comupterChoice[i]);
-
-    if(computer === comupterChoice[i]) {
-      alert('Apple squad!');
-      flag = true;
-      break;
-    }
-  }
-  if (!flag){
-   alert('PC\'s are extinct.');
-  }
 }
-goodName();
+numberGame();
 
+// Second Multi Choice Game
 
-  // Fifth Question
-  var workout = prompt('Do I workout?').toUpperCase();
-  console.log('my workout:' + workout);
-
-  if(workout === 'Y' || workout === 'YES') {
-    alert('That\'s going to change now that CF started');
-  } else {
-    alert('Yea, I like that sedentary lifestyle.');
-  }
-}
-
-fiveQuestions();
-
-// Misc. question
-function what(){
-  while (game != 'AWESOME') {
-    var game = prompt("How would you rate this game? (Bad? Okay? Awesome?)").toUpperCase();
-    if(game === 'AWESOME'){
-      alert('Correct!');
-      break;
-    }else{
-       alert('Try again!');
-    }
-    console.log('answer game:' + game);
-  }
-}
-what();
-
-//multiple choice question
 function multiChoice(){
   var houseArray = ['SEATTLE', 'TACOMA', 'BELLEVUE'];
   var house = prompt('What are my favorite cities in Washington?').toUpperCase();
@@ -141,6 +98,7 @@ function multiChoice(){
 
     if (houseArray.includes(house) ) {
       alert('One of my favorite cities!');
+      scoreCounter++;
       first = true;
       break;
     }
@@ -150,3 +108,22 @@ function multiChoice(){
   }
 }
 multiChoice();
+
+// Rating Question
+
+function rating() {
+  while (game != 'AWESOME') {
+    var game = prompt("How would you rate this game? (Bad? Okay? Awesome?)").toUpperCase();
+    if(game === 'AWESOME'){
+      alert('Correct!');
+      scoreCounter++
+      break;
+    }else{
+       alert('Try again!');
+    }
+    console.log('answer game:' + game);
+  }
+}
+rating();
+
+prompt('Thank you for playing my game ' + user + '!' + ' Your score is ' + scoreCounter + ' out of 8. Not too bad ')
