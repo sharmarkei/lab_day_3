@@ -45,6 +45,7 @@ nav ul li {
 
 #education {
   margin-top: 50px;
+  text-align: center;
 }
 
 .logo {
@@ -97,4 +98,40 @@ footer {
   padding-right: 5px;
   background: #05d5d5;
 
+}
+
+#favorite {
+  text-align: center;
+}
+#life {
+    text-align: center;
+}
+
+#about {
+    text-align: center;
+}
+
+
+#life {
+    text-align: center;
+}
+
+.p_one {
+  background: blue;
+}
+
+.p_two {
+  background: #fff;
+}
+
+.p_three{
+  background: #9f8a33;
+
+}
+.life{
+  text-decoration-color: green;
+}
+
+.p_four {
+  background: red;
 }
