@@ -1,0 +1,91 @@
+* {
+  font-family: helvetica;
+  text-align: center;
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/*Hides scroll bar*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+  color: black;
+  background-color: silver;
+}
+
+header {
+  height: 100px;
+  background: linear-gradient(black,white);
+  opacity: 0.9;
+  position: fixed;
+  width: 98.9%;
+
+}
+
+header div {
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+.logo {
+  float: left;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 45px;
+
+}
+.box{
+  background: url("http://wallpaper-gallery.net/images/website-background-wallpapers/website-background-wallpapers-12.jpg");
+  background-size:contain;
+  width: 1264px;
+  height: 500px;
+}
+
+.selfie {
+  width: 300px;
+  height: 300px;
+  text-align: right;
+  margin-top: 150px;
+  margin-bottom: 50px;
+
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  margin: 50px;
+}
+
+p{
+  color: black;
+  line-height: 21px;
+  letter-spacing: 0.5px
+}
+footer {
+  display: inline-block;
+}
+
+.github {
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+}
+
+.linkedin {
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+}
