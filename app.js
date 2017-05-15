@@ -126,4 +126,4 @@ function rating() {
 }
 rating();
 
-alert('Thank you for playing my game ' + user + '!' + ' Your score is ' + scoreCounter + ' out of 8. Not too bad ');
+alert('Thank you for playing my game ' + user + '!' + ' Your score is ' + scoreCounter + ' out of 9. Not too bad ');
