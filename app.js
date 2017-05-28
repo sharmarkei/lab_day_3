@@ -66,7 +66,7 @@ function numberGame(){
       counter++;
     }
     if (counter > 4) {
-      alert('WRONG! The number was', num);
+      alert('WRONG! The number was ' + num);
       break;
     }
   }
